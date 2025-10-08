@@ -1,0 +1,123 @@
+/* Media Queries para Responsive Design */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .features-grid,
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        box-shadow: var(--shadow);
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 576px) {
+    .container {
+        width: 95%;
+    }
+    
+    .hero {
+        padding: 3rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .features,
+    .technologies,
+    .contact {
+        padding: 3rem 0;
+    }
+    
+    .features-grid,
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 400px) {
+    .logo span {
+        display: none;
+    }
+    
+    .feature-card,
+    .tech-card {
+        padding: 1.5rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+    }
+}
